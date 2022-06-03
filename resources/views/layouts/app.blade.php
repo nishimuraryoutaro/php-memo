@@ -85,8 +85,8 @@
                         <div class="card-body">
                             <a href="/" class="card-text d-block">すべて表示</a>
                     @foreach($tags as $tag)
-                        <a  href="/tag={{$tag['id']}}" class="card-text d-block">{{ $tag['name'] }}</a>
-                    @endforeach
+                        <a  href="/?tag={{$tag['id']}}" class="card-text d-block">{{ $tag['name'] }}</a>
+                    @endforeach 
                         </div>
                     </div>
                 </div>

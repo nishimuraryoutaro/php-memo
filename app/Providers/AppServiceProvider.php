@@ -27,8 +27,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         view()->composer('*', function ($view){
-        $query_tag = \Request::query['tag'];
-
+        $query_tag = \Request::query('tag');
         if( !empty($query_tag) ){
             $memos = Memo::select('memos.*')
             ->leftJoin('memo_tags', 'memo_tags.memo_id', '=', 'memos.id')
